@@ -1,0 +1,108 @@
+
+header{
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(0, 146, 139);
+}
+
+form{
+    height: 40px;
+    margin-bottom: 30px;
+}
+
+#newToDo{
+    font-size: 20px;
+    border: 1px solid rgb(0, 146, 139);
+    border-radius: 5px;
+    width: 85%;
+    padding: 7px;
+    font-family: 'Sriracha', cursive;
+}
+
+#newToDo:focus{
+    outline: none;
+    border: 3px solid rgb(0, 146, 139);
+}
+
+#button{
+    height: 40px;
+    margin-left: 6px;
+    width: 40px;
+    padding-top: -5px;
+    border: 1px solid rgb(0, 146, 139);
+    background-color: white;
+    color: rgb(0, 146, 139);
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+.addNew:hover{
+    background-color: black;
+    color: white;
+}
+
+body{
+    margin: 8%;
+    font-family: 'Sriracha', cursive;
+    background-color: azure;
+}
+
+
+ul li{
+    position: relative;
+    padding: 12px 8px 12px 20px;
+    list-style-type: none;
+    font-size: 14px;
+    border-bottom: 1px solid black;
+    font-family: 'Sriracha', cursive;
+    width: auto;
+    display: inline-block;
+}
+
+ul li:hover{
+    background-color: aliceblue;
+}
+
+ul li.completed{
+    background-color: grey;
+    text-decoration: line-through;
+}
+
+#todoContainer p {
+    margin: 10px;
+    padding: 10 px;
+    font-weight: bold;
+}
+
+button{
+    color: white;
+    background-color: red;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+}
+
+p{
+    width: 200px;
+    margin: 10px;
+}
+
+.deleteButton,
+.checkButton{
+    border: 2px solid red;
+    
+}
+
+
+.todoWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox {
+    color: green;
+    height: 25px;
+    width: 25px;
+}
