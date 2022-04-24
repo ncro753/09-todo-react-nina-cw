@@ -1,11 +1,8 @@
-import React, { Component } from 'react';
-
+import React from 'react';
 
 function Todo(){
     return (
-        <div id="todoContainer">
-            <ul id="todoItems"></ul>
-       </div>
+        
     );
   }
 

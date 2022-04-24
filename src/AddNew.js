@@ -1,14 +1,29 @@
 import React, { Component } from 'react';
 
 
-function AddNew(){
-    const inputTextDo = (d) => {
-        console.log(d.target.value);
+function AddNew({setInputTxt, todoItems, setTodoItems, inputTxt}){
+    const inputTextDo = (t) => {
+        console.log(t.target.value);
+        setInputTxt(t.target.value);
     };
+
+    const submitTextDo = (t) => {
+        t.preventDefault();
+        setTodoItems([
+            ...todoItems, {text: inputTxt, completed: false, id: Math.random()*100}
+        ]);
+        setInputTxt("");
+    };
+
     return (
         <form id="addNew" action="">
-            <input onChange={inputTextDo} type="text" id="newToDo" placeholder="add a new item"></input>
-            <button id="button"> + </button>
+            <input 
+                value={inputTxt} 
+                onChange={inputTextDo} 
+                type="text" id="newToDo" 
+                placeholder="add a new item">
+            </input>
+            <button onClick={submitTextDo} id="button"> + </button>
         </form>
     );
   }
