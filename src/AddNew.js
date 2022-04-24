@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {  } from 'react';
 
 
 function AddNew({setInputTxt, todoItems, setTodoItems, inputTxt}){
@@ -10,7 +10,7 @@ function AddNew({setInputTxt, todoItems, setTodoItems, inputTxt}){
     const submitTextDo = (t) => {
         t.preventDefault();
         setTodoItems([
-            ...todoItems, {text: inputTxt, completed: false, id: Math.random()*100}
+            ...todoItems, {text: inputTxt, completed: false, id: Math.random()*100, user:"124b10-d2cdcf-95e1c5-67d7bf-35b4b9"}
         ]);
         setInputTxt("");
     };
