@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './App.css';
 
 // function AddNew({setInputTxt, todoItems, setTodoItems, inputTxt}){
 //     const inputTextDo = (t) => {
@@ -33,13 +33,16 @@ class AddNew extends Component {
 
     render(){
         return (
+            <span>
             <form id="addNew" onSubmit={this.addTodo}>
                 <input  
                     type="text" id="newToDo" 
                     placeholder="add a new item">
                 </input>
                 <button id="button"> + </button>
+                <button type="button" onClick={this.props.sortTodos} onKeyDown={this.handleKeyDown} id="sort"> sort </button>
             </form>
+            </span>
         );
     }
     }

@@ -15,7 +15,7 @@ form{
     font-size: 20px;
     border: 1px solid rgb(0, 146, 139);
     border-radius: 5px;
-    width: 85%;
+    width: 75%;
     padding: 7px;
     font-family: 'Sriracha', cursive;
 }
@@ -58,6 +58,7 @@ ul li{
     font-family: 'Sriracha', cursive;
     width: auto;
     display: inline-block;
+    
 }
 
 ul li:hover{
@@ -82,6 +83,7 @@ button{
     text-align: center;
     text-decoration: none;
     border: none;
+    margin-left: 15px;
 }
 
 p{
@@ -93,7 +95,6 @@ p{
 .checkButton{
     border: 2px solid red;
     margin-left: 10px;
-    
 }
 
 
@@ -102,15 +103,32 @@ p{
     align-items: center;
 }
 
-.checkbox {
-    color: green;
-    height: 25px;
-    width: 25px;
+
+input[type="checkbox" i]{
+    margin-right: 8px;
+    height: 20px;
+    width: 20px;
 }
 
+input[type="checkbox" i]:checked{
+    background-color:rgb(5, 109, 5);
+}
 
 .todo{
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+#sort{
+    height: 40px;
+    margin-left: 6px;
+    width: 65px;
+    padding-top: -5px;
+    border: 1px solid rgb(0, 146, 139);
+    background-color: white;
+    color: rgb(0, 146, 139);
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 20px;
 }

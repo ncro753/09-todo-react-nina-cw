@@ -22,6 +22,7 @@ class App extends Component {
 
     this.makeTodo = this.makeTodo.bind(this);
     this.updateToDo = this.updateToDo.bind(this);
+    this.sortTodos = this.sortTodos.bind(this);
    
   };
 
@@ -46,6 +47,16 @@ class App extends Component {
   componentDidMount() {
     this.updateToDo();
   }
+
+  sortTodos() {
+    const sortItems= this.state.todos;
+    sortItems.sort(function (a, b) {
+    return a.text.localeCompare(b.text);
+  })
+    this.setState({todos: sortItems});
+  }
+
+  
 
   // componentWillUnmount(){
   //   //document.removeEventListener("click", deleteTodoDo);
@@ -93,7 +104,7 @@ class App extends Component {
         <header>
             <h1> My <em>TO DO</em> List</h1>
         </header>
-        <AddNew updateToDo={this.updateToDo} makeTodo={this.makeTodo} />
+        <AddNew updateToDo={this.updateToDo} makeTodo={this.makeTodo} sortTodos={this.sortTodos}/>
         {this.state.todos.map((todo) => <Todo updateToDo={this.updateToDo} key={todo.id} id={todo.id} text = {todo.text} checked={todo.completed}/>)}
       </div>
     );
